@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Structure3D - Typical</title>
+</head>
+<body>
+    <div class="font-sans text-slate-900">
+        <div id="navbar" class="p-6 flex flex-row">
+            <a href="./index.html">
+                <div class="transition hover:text-slate-300 hover:-translate-y-0.5">
+                    <p class="antialiased text-lg mx-6">Home</p>
+                </div>
+            </a>
+            <a href="./download.html">
+                <div class="transition hover:text-slate-300 hover:-translate-y-0.5">
+                    <p class="antialiased text-lg mx-6">Download</p>
+                </div>
+            </a>
+            <a href="./license.html">
+                <div class="transition hover:text-slate-300 hover:-translate-y-0.5">
+                    <p class="antialiased text-lg mx-6">License</p>
+                </div>
+            </a>
+            <a href="./tutorials.html">
+                <div class="transition hover:text-slate-300 hover:-translate-y-0.5">
+                    <p class="antialiased text-lg mx-6">Tutorials</p>
+                </div>
+            </a>
+            <a href="./typical.html">
+                <div class="transition hover:text-slate-300 hover:-translate-y-0.5">
+                    <p class="antialiased text-lg mx-6">Typical</p>
+                </div>
+            </a>
+            <a href="./revisions.html">
+                <div class="transition hover:text-slate-300 hover:-translate-y-0.5">
+                    <p class="antialiased text-lg mx-6">Revisions</p>
+                </div>
+            </a>
+            <a href="http://webcivil.com/">
+                <div class="transition hover:text-slate-300 hover:-translate-y-0.5">
+                    <p class="antialiased text-lg mx-6">Webcivil</p>
+                </div>
+            </a>
+        </div>
+
+        <div id="body" class="mb-6 mt-20 content-center">
+            <div id="stage">
+                <a href="./images/s1.jpg"><img src="./images/s1.jpg" width="1024" height="666"></a>
+                <a href="./images/s2.jpg"><img src="./images/s2.jpg" width="1024" height="666"></a>
+                <a href="./images/s3.jpg"><img src="./images/s3.jpg" width="1024" height="666"></a>
+                <a href="./images/s4.jpg"><img src="./images/s4.jpg" width="1024" height="666"></a>
+                <a href="./images/s5.jpg"><img src="./images/s5.jpg" width="1024" height="666"></a>
+            </div>
+        </div>
+
+
+        <footer class="mt-96">
+            <p class="text-center text-sm">
+                Copyright© 2010-2022   Setford Consulting & Technology Ltd., All Rights Reserved.
+            </p>
+        </footer>
+    </div>
+</body>
+
+<style>
+
+    #stage {
+        margin: 1em auto;
+        width: 1024px;
+        height: 666px;
+    }
+
+    #stage a {
+        position: absolute;
+    }
+    #stage a img {
+        padding: 10px;
+        background: #fff;
+    }
+
+    #stage a:nth-of-type(1) {
+        animation-name: fader;
+        animation-delay: 4s;
+        animation-duration: 1s;
+        z-index: 20;
+    }
+    #stage a:nth-of-type(2) {
+        z-index: 10;
+    }
+    #stage a:nth-of-type(n+3) {
+        display: none;
+    }
+
+    @keyframes fader {
+        from { opacity: 1.0; }
+        to   { opacity: 0.0; }
+    }
+
+</style>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function(e) {
+
+    // Original JavaScript code by Chirp Internet: www.chirpinternet.eu
+    // Please acknowledge use of this code by including this header.
+
+        var stage = document.getElementById("stage");
+        var fadeComplete = function(e) { stage.appendChild(arr[0]); };
+        var arr = stage.getElementsByTagName("a");
+        for(var i=0; i < arr.length; i++) {
+            arr[i].addEventListener("animationend", fadeComplete, false);
+        }
+
+    }, false);
+</script>
+
+</html>
