@@ -14,3 +14,13 @@
         transform: translateY(0);
     }
 }
+
+.mxlarge{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.mxsmall{
+    margin-left: 5%;
+    margin-right: 5%;
+}
